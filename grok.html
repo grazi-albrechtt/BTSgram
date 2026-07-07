@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTSgram • Army</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .bts-gradient {
+            background: linear-gradient(135deg, #1e3a8a, #7c3aed, #db2777);
+        }
+        
+        .story-circle {
+            background: linear-gradient(135deg, #f97316, #ec4899, #8b5cf6);
+            padding: 3px;
+        }
+        
+        .post-image {
+            max-height: 600px;
+            object-fit: cover;
+        }
+        
+        .nav-active {
+            color: #7c3aed;
+        }
+        
+        .feed-container::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div class="flex min-h-screen">
+        <!-- Sidebar Esquerda -->
+        <div class="w-64 border-r border-gray-800 hidden lg:flex flex-col fixed h-screen p-4">
+            <div class="flex items-center gap-3 mb-10 px-3">
+                <i class="fa-solid fa-music text-purple-500 text-4xl"></i>
+                <span class="text-3xl font-bold tracking-tighter">BTSgram</span>
+            </div>
+            
+            <nav class="space-y-2">
+                <a href="#" class="flex items-center gap-5 px-3 py-3 rounded-xl hover:bg-gray-900 nav-active">
+                    <i class="fa-solid fa-house text-2xl"></i>
+                    <span class="font-medium">Início</span>
+                </a>
+                <a href="#" class="flex items-center gap-5 px-3 py-3 rounded-xl hover:bg-gray-900">
+                    <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+                    <span class="font-medium">Explorar</span>
+                </a>
+                <a href="#" class="flex items-center gap-5 px-3 py-3 rounded-xl hover:bg-gray-900">
+                    <i class="fa-solid fa-play text-2xl"></i>
+                    <span class="font-medium">Reels</span>
+                </a>
+                <a href="#" class="flex items-center gap-5 px-3 py-3 rounded-xl hover:bg-gray-900">
+                    <i class="fa-solid fa-shop text-2xl"></i>
+                    <span class="font-medium">Loja ARMY</span>
+                </a>
+                <a href="#" class="flex items-center gap-5 px-3 py-3 rounded-xl hover:bg-gray-900">
+                    <i class="fa-solid fa-message text-2xl"></i>
+                    <span class="font-medium">Mensagens</span>
+                </a>
+                <a href="#" class="flex items-center gap-5 px-3 py-3 rounded-xl hover:bg-gray-900 relative">
+                    <i class="fa-solid fa-heart text-2xl"></i>
+                    <span class="font-medium">Notificações</span>
+                    <span class="absolute left-8 top-3 bg-red-500 text-xs px-1.5 rounded-full">9+</span>
+                </a>
+                <a href="#" class="flex items-center gap-5 px-3 py-3 rounded-xl hover:bg-gray-900">
+                    <i class="fa-solid fa-square-plus text-2xl"></i>
+                    <span class="font-medium">Criar</span>
+                </a>
+                <a href="#" class="flex items-center gap-5 px-3 py-3 rounded-xl hover:bg-gray-900">
+                    <img src="https://picsum.photos/id/64/32/32" class="w-8 h-8 rounded-full object-cover" alt="Perfil">
+                    <span class="font-medium">jiminie</span>
+                </a>
+            </nav>
+            
+            <div class="mt-auto px-3">
+                <div class="flex items-center gap-3 text-sm text-gray-400">
+                    <i class="fa-solid fa-music"></i>
+                    <span>Bangtan Sonyeondan</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="flex-1 lg:ml-64">
+            <!-- Top Nav Mobile -->
+            <div class="lg:hidden fixed top-0 left-0 right-0 bg-black border-b border-gray-800 z-50">
+                <div class="flex items-center justify-between px-4 py-3">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-music text-purple-500 text-3xl"></i>
+                        <span class="text-2xl font-bold">BTSgram</span>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <i class="fa-solid fa-heart text-xl"></i>
+                        <i class="fa-solid fa-paper-plane text-xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto pt-14 lg:pt-0">
+                <!-- Stories -->
+                <div class="border-b border-gray-800 py-6 px-4 overflow-x-auto whitespace-nowrap flex gap-6 feed-container">
+                    <!-- Story 1 -->
+                    <div class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="story-circle rounded-full">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-black">
+                                <img src="https://picsum.photos/id/64/200/200" class="w-full h-full object-cover" alt="RM">
+                            </div>
+                        </div>
+                        <span class="text-xs mt-1">RM</span>
+                    </div>
+                    
+                    <!-- Story 2 -->
+                    <div class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="story-circle rounded-full">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-black">
+                                <img src="https://picsum.photos/id/65/200/200" class="w-full h-full object-cover" alt="Jin">
+                            </div>
+                        </div>
+                        <span class="text-xs mt-1">Jin</span>
+                    </div>
+                    
+                    <!-- Story 3 -->
+                    <div class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="story-circle rounded-full">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-black">
+                                <img src="https://picsum.photos/id/66/200/200" class="w-full h-full object-cover" alt="Suga">
+                            </div>
+                        </div>
+                        <span class="text-xs mt-1">Suga</span>
+                    </div>
+                    
+                    <!-- Story 4 -->
+                    <div class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="story-circle rounded-full">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-black">
+                                <img src="https://picsum.photos/id/67/200/200" class="w-full h-full object-cover" alt="J-Hope">
+                            </div>
+                        </div>
+                        <span class="text-xs mt-1">J-Hope</span>
+                    </div>
+                    
+                    <!-- Story 5 -->
+                    <div class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="story-circle rounded-full">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-black">
+                                <img src="https://picsum.photos/id/68/200/200" class="w-full h-full object-cover" alt="Jimin">
+                            </div>
+                        </div>
+                        <span class="text-xs mt-1">Jimin</span>
+                    </div>
+                    
+                    <!-- Story 6 -->
+                    <div class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="story-circle rounded-full">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-black">
+                                <img src="https://picsum.photos/id/69/200/200" class="w-full h-full object-cover" alt="V">
+                            </div>
+                        </div>
+                        <span class="text-xs mt-1">V</span>
+                    </div>
+                    
+                    <!-- Story 7 -->
+                    <div class="flex flex-col items-center gap-1 cursor-pointer">
+                        <div class="story-circle rounded-full">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-black">
+                                <img src="https://picsum.photos/id/70/200/200" class="w-full h-full object-cover" alt="Jungkook">
+                            </div>
+                        </div>
+                        <span class="text-xs mt-1">Jungkook</span>
+                    </div>
+                </div>
+
+                <!-- Feed -->
+                <div class="space-y-8 pb-20">
+                    <!-- Post 1 -->
+                    <div class="border border-gray-800 rounded-2xl overflow-hidden bg-zinc-950">
+                        <div class="flex items-center justify-between px-4 py-3">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/id/64/40/40" class="w-8 h-8 rounded-full object-cover ring-2 ring-purple-500" alt="">
+                                <div>
+                                    <span class="font-semibold">bts.bighitofficial</span>
+                                    <span class="text-gray-400 text-sm ml-1">• Seoul</span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        
+                        <img src="https://picsum.photos/id/1015/600/700" class="w-full post-image" alt="BTS Concert">
+                        
+                        <div class="px-4 pt-4 pb-2">
+                            <div class="flex justify-between text-2xl mb-3">
+                                <div class="flex gap-6">
+                                    <i class="fa-solid fa-heart text-red-500 cursor-pointer"></i>
+                                    <i class="fa-regular fa-comment cursor-pointer"></i>
+                                    <i class="fa-regular fa-paper-plane cursor-pointer"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark cursor-pointer"></i>
+                            </div>
+                            
+                            <div class="font-semibold mb-1">1.248.392 likes</div>
+                            <div>
+                                <span class="font-semibold">bts.bighitofficial</span> 
+                                <span>Permission to Dance on stage! 💜 #BTS #ARMY</span>
+                            </div>
+                            <div class="text-gray-400 text-sm mt-1 cursor-pointer">Ver todos os 12.459 comentários</div>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="border border-gray-800 rounded-2xl overflow-hidden bg-zinc-950">
+                        <div class="flex items-center justify-between px-4 py-3">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/id/68/40/40" class="w-8 h-8 rounded-full object-cover ring-2 ring-purple-500" alt="">
+                                <div>
+                                    <span class="font-semibold">jimin</span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        
+                        <img src="https://picsum.photos/id/201/600/750" class="w-full post-image" alt="Jimin">
+                        
+                        <div class="px-4 pt-4 pb-2">
+                            <div class="flex justify-between text-2xl mb-3">
+                                <div class="flex gap-6">
+                                    <i class="fa-solid fa-heart cursor-pointer"></i>
+                                    <i class="fa-regular fa-comment cursor-pointer"></i>
+                                    <i class="fa-regular fa-paper-plane cursor-pointer"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark cursor-pointer"></i>
+                            </div>
+                            
+                            <div class="font-semibold mb-1">892.341 likes</div>
+                            <div>
+                                <span class="font-semibold">jimin</span> 
+                                <span>Who’s ready for the next chapter? ✨</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="border border-gray-800 rounded-2xl overflow-hidden bg-zinc-950">
+                        <div class="flex items-center justify-between px-4 py-3">
+                            <div class="flex items-center gap-3">
+                                <img src="https://picsum.photos/id/70/40/40" class="w-8 h-8 rounded-full object-cover ring-2 ring-purple-500" alt="">
+                                <div>
+                                    <span class="font-semibold">jungkook.97</span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        
+                        <img src="https://picsum.photos/id/133/600/680" class="w-full post-image" alt="Jungkook">
+                        
+                        <div class="px-4 pt-4 pb-2">
+                            <div class="flex justify-between text-2xl mb-3">
+                                <div class="flex gap-6">
+                                    <i class="fa-solid fa-heart cursor-pointer"></i>
+                                    <i class="fa-regular fa-comment cursor-pointer"></i>
+                                    <i class="fa-regular fa-paper-plane cursor-pointer"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark cursor-pointer"></i>
+                            </div>
+                            
+                            <div class="font-semibold mb-1">1.4M likes</div>
+                            <div>
+                                <span class="font-semibold">jungkook.97</span> 
+                                <span>Still with you 💜</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Direita -->
+        <div class="w-80 hidden xl:block border-l border-gray-800 p-6 fixed right-0 h-screen overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                    <img src="https://picsum.photos/id/64/48/48" class="w-12 h-12 rounded-full" alt="">
+                    <div>
+                        <div class="font-semibold">bts.bighitofficial</div>
+                        <div class="text-sm text-gray-400">BTS Official</div>
+                    </div>
+                </div>
+                <button class="text-purple-400 font-semibold text-sm">Mudar</button>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between text-sm mb-4">
+                    <span class="text-gray-400 font-semibold">Sugestões para você</span>
+                    <span class="font-semibold text-xs">Ver tudo</span>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://picsum.photos/id/201/40/40" class="w-9 h-9 rounded-full" alt="">
+                            <div>
+                                <div class="text-sm font-medium">armyglobal</div>
+                                <div class="text-xs text-gray-400">Segue você</div>
+                            </div>
+                        </div>
+                        <button class="text-purple-400 text-sm font-semibold">Seguir</button>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://picsum.photos/id/133/40/40" class="w-9 h-9 rounded-full" alt="">
+                            <div>
+                                <div class="text-sm font-medium">btsarmybrasil</div>
+                                <div class="text-xs text-gray-400">Novo no Instagram</div>
+                            </div>
+                        </div>
+                        <button class="text-purple-400 text-sm font-semibold">Seguir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-xs text-gray-500 leading-relaxed">
+                Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • BTSgram © 2026
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-black border-t border-gray-800 z-50">
+        <div class="flex justify-around items-center py-3 text-2xl">
+            <i class="fa-solid fa-house text-purple-500"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-square-plus"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-circle-user"></i>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script já carregado
+        console.log("%cBTSgram carregado com sucesso! 💜", "color: #a855f7; font-size: 16px; font-weight: bold");
+        
+        // Like toggle (demo)
+        document.querySelectorAll('.fa-heart').forEach(heart => {
+            heart.addEventListener('click', function() {
+                if(this.classList.contains('fa-solid')) {
+                    this.classList.remove('fa-solid', 'text-red-500');
+                    this.classList.add('fa-regular');
+                } else {
+                    this.classList.add('fa-solid', 'text-red-500');
+                    // Animação simples
+                    this.style.transform = 'scale(1.4)';
+                    setTimeout(() => this.style.transform = 'scale(1)', 200);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
